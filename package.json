@@ -2,7 +2,7 @@
   "name": "test_task_form",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://yuribenjamin.github.io/my-app",
+  "homepage": "http://smoylik2.github.io/test_task_form",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
