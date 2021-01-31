@@ -1,0 +1,71 @@
+$greyBorder: 1px solid #DBE2EA;
+@mixin errorLine{
+  position: absolute;
+  font-size: 14px;
+  line-height: 18px;
+  color: #FF7171;
+}
+.block {
+  vertical-align: middle;
+  color: #756F86;
+  margin-bottom: 39px;
+  position: relative;
+  line-height: 1.5rem;
+}
+/* Scope with custom checkbox*/
+.container {
+  display: block;
+  position: relative;
+  padding-left: 2rem;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #756F86;
+}
+/* Hide default checkbox */
+.inputField {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+/* Create custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 1.5rem;
+  width: 1.5rem;
+  border: $greyBorder;
+  border-radius: 4px;
+}
+/* Create after-element with sign */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+/* if checked -> show checked sign */
+.inputField:checked ~ .checkmark:after {
+  display: block;
+}
+/* if checked -> show blue border */
+.inputField:checked ~ .checkmark{
+  border: #0880AE solid 2px;
+}
+/* Create checked sign */
+.checkmark:after {
+  left: 8px;
+  top: 2px;
+  width: 6px;
+  height: 14px;
+  border: solid #0880AE;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+/* if error -> show error line */
+.lineError {
+  @include errorLine
+}

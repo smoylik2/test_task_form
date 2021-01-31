@@ -1,0 +1,85 @@
+$lineHeight: 21px;
+$greyBorder: 1px solid #DBE2EA;
+@mixin errorLine{
+  position: absolute;
+  font-size: 14px;
+  line-height: 18px;
+  color: #FF7171;
+}
+
+.block {
+  font-size: 1rem;
+  vertical-align: bottom;
+  font-weight: 500;
+  color: #756F86;
+  margin-bottom: 34px;
+  position: relative;
+}
+/* main button like select input */
+.inputField {
+  position: relative;
+  appearance: none;
+  display: flex;
+  width: 100%;
+  margin: 7px 0 8px;
+  background: white;
+  border: $greyBorder;
+  border-radius: 6px;
+  box-sizing: border-box;
+  box-shadow: 0 4px 8px rgba(44, 39, 56, 0.04);
+  padding: 16px 16px 15px;
+  font-size: 1rem;
+  color: #756F86;
+  line-height: $lineHeight;
+  &:focus {
+    outline: none;
+    border: 2px solid #0880AE;
+  }
+}
+/* custom arrow */
+.block:after {
+  content: "";
+  position: absolute;
+  right: 1.3em;
+  top: 2.7em;
+  width: 10px;
+  height: 12px;
+  border: solid #0880AE;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+/* drop-down menus styles */
+.hideMenu {
+  display: none;
+  position: absolute;
+  border: $greyBorder;
+  border-radius: 6px;
+  overflow: hidden;
+  width: 100%;
+  z-index: 1;
+}
+/* show menu modification */
+.showMenu{
+  display: flex;
+  flex-wrap: wrap;
+}
+/* buttons in drop-down menu */
+.item {
+  appearance: none;
+  width: 100%;
+  cursor: pointer;
+  padding: 12px 15px 11px;
+  text-align: left;
+  color: #756F86;
+  line-height: $lineHeight;
+  font-size: 1em;
+  border: none;
+  background-color: white;
+  &:hover {
+    background-color: #EBF4F8;
+  }
+}
+/* styled error message */
+.lineError {
+  @include errorLine
+}
