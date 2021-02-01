@@ -1,5 +1,7 @@
 Test task for create registration form with validation.
 
+LIVE version: http://smoylik2.github.io/test_task_form
+
 Created with CRA, Formik and Yup, scss/sass.
 
 Validation function:
