@@ -77,7 +77,7 @@ const FormBody = () => {
         {/* Header block */}
         <div className={s.header}>
             <h1 className={s.headTitle}>Регистрация</h1>
-            <span>Уже есть аккаунт? <a href="/" className={s.link}>Войти</a></span>
+            <span>Уже есть аккаунт? <a href="/test_task_form" className={s.link}>Войти</a></span>
         </div>
         {/* Form area */}
         <form onSubmit={formik.handleSubmit} className={s.form}>
@@ -113,7 +113,7 @@ const FormBody = () => {
                          setTouchedLanguage={setTouchedLanguage}/>
             {/* put checkbox for user agreement */}
             <CheckboxField id={`userAgree`}
-                           label={<>Принимаю <a href='/' className={s.link}>условия</a> использования</>}
+                           label={<>Принимаю <a href='/test_task_form' className={s.link}>условия</a> использования</>}
                            formikProps={formik.getFieldProps('userAgree')}
                            touched={formik.touched.userAgree}
                            error={formik.errors.userAgree}/>
